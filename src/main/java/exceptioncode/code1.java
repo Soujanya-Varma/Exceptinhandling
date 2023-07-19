@@ -5,8 +5,8 @@ import java.util.Scanner;
 public class code1 {
 
 	public static void main(String[] args) {
-		try {
-			Scanner sc=new Scanner(System.in);
+		try(Scanner sc=new Scanner(System.in)) {
+			
 			System.out.println("Division operation");
 			System.out.println("enter the numerator");
 			int num=sc.nextInt();
@@ -29,18 +29,18 @@ public class code1 {
 		catch(ArithmeticException e1) {
 			System.out.println("ArithmeticException");
 		}
-		catch(NegativeArraySizeException e2) {
-			System.out.println("NegativeArraySizeException");
+		catch(NegativeArraySizeException|NullPointerException e2) {
+			System.out.println("ArraySizeException");
 		}
-		catch(ArrayIndexOutOfBoundsException e3) {
-			System.out.println("ArrayIndexOutOfBoundException");
-		}
-//		catch(InputMismatchException e4) {
-//			System.out.println("InputMismatchException");
+//		catch(ArrayIndexOutOfBoundsException e3) {
+//			System.out.println("ArrayIndexOutOfBoundException");
 //		}
-		catch(NullPointerException e5) {
-			System.out.println("NullPointerException");
-		}
+//		catch(InputMismatchException e4) {
+//			System.out.println("InputException");
+//		}
+//		catch(NullPointerException e5) {
+//			System.out.println("NullPointerException");
+//		}
 		catch(Exception e6) {
 			System.out.println("Exception occured");
 		}
